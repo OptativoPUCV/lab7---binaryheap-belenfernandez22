@@ -21,7 +21,7 @@ void* heap_top(Heap* pq){
     return NULL;
 
   typedef struct Heap {
-    HANDLE handle; //
+    HANDLE handle; /
     int capacity; 
     int size; 
     int* heapArray;
