@@ -174,3 +174,41 @@ Fri 29 Sep 2023 02:02:40 AM UTC:
  tests:  0|4
 total_score: 0/70
 622e1f7
+Fri 29 Sep 2023 02:02:58 AM UTC: 
+ heap.c | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:28:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘handle’
+   28 |     heap->handle = HeapCreate(0, 3 * sizeof(int), 0);
+      |         ^~
+heap.c:28:20: error: implicit declaration of function ‘HeapCreate’ [-Werror=implicit-function-declaration]
+   28 |     heap->handle = HeapCreate(0, 3 * sizeof(int), 0);
+      |                    ^~~~~~~~~~
+heap.c:29:13: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘handle’
+   29 |     if (heap->handle == NULL) {
+      |             ^~
+heap.c:35:30: error: implicit declaration of function ‘HeapAlloc’; did you mean ‘realloc’? [-Werror=implicit-function-declaration]
+   35 |     heap->heapArray = (int*) HeapAlloc(heap->handle, 0, 3 * sizeof(int));
+      |                              ^~~~~~~~~
+      |                              realloc
+heap.c:35:44: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘handle’
+   35 |     heap->heapArray = (int*) HeapAlloc(heap->handle, 0, 3 * sizeof(int));
+      |                                            ^~
+heap.c:38:9: error: implicit declaration of function ‘HeapDestroy’ [-Werror=implicit-function-declaration]
+   38 |         HeapDestroy(heap->handle); // Destruir el heap privado
+      |         ^~~~~~~~~~~
+heap.c:38:25: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘handle’
+   38 |         HeapDestroy(heap->handle); // Destruir el heap privado
+      |                         ^~
+heap.c:44:11: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘capacity’; did you mean ‘capac’?
+   44 |     heap->capacity = 3; // La capacidad inicial es de 3 casillas
+      |           ^~~~~~~~
+      |           capac
+At top level:
+heap.c:21:9: error: ‘createHeap’ defined but not used [-Werror=unused-function]
+   21 |   Heap* createHeap() {
+      |         ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+736047c
