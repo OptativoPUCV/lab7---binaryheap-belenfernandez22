@@ -43,7 +43,7 @@ void* heap_top(Heap* pq){
     heap->capacity = 3; 
     heap->size = 0; 
 
-    return heap;
+
 }
     return NULL;
 
