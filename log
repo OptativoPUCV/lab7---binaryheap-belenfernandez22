@@ -326,3 +326,48 @@ heap.c:21:9: error: ‘createHeap’ defined but not used [-Werror=unused-functi
 cc1: all warnings being treated as errors
 Compilation failed
 d0f91f1
+Fri 29 Sep 2023 02:03:47 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:28:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘handle’
+   28 |     heap->handle = HeapCreate(0, 3 * sizeof(int), 0);
+      |         ^~
+heap.c:28:20: error: implicit declaration of function ‘HeapCreate’ [-Werror=implicit-function-declaration]
+   28 |     heap->handle = HeapCreate(0, 3 * sizeof(int), 0);
+      |                    ^~~~~~~~~~
+heap.c:29:13: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘handle’
+   29 |     if (heap->handle == NULL) {
+      |             ^~
+heap.c:35:30: error: implicit declaration of function ‘HeapAlloc’; did you mean ‘realloc’? [-Werror=implicit-function-declaration]
+   35 |     heap->heapArray = (int*) HeapAlloc(heap->handle, 0, 3 * sizeof(int));
+      |                              ^~~~~~~~~
+      |                              realloc
+heap.c:35:44: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘handle’
+   35 |     heap->heapArray = (int*) HeapAlloc(heap->handle, 0, 3 * sizeof(int));
+      |                                            ^~
+heap.c:38:9: error: implicit declaration of function ‘HeapDestroy’ [-Werror=implicit-function-declaration]
+   38 |         HeapDestroy(heap->handle);
+      |         ^~~~~~~~~~~
+heap.c:38:25: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘handle’
+   38 |         HeapDestroy(heap->handle);
+      |                         ^~
+heap.c:43:11: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘capacity’; did you mean ‘capac’?
+   43 |     heap->capacity = 3;
+      |           ^~~~~~~~
+      |           capac
+heap.c: At top level:
+heap.c:48:5: error: expected identifier or ‘(’ before ‘return’
+   48 |     return NULL;
+      |     ^~~~~~
+heap.c:52:1: error: expected identifier or ‘(’ before ‘}’ token
+   52 | }
+      | ^
+heap.c: In function ‘heap_top’:
+heap.c:47:1: error: control reaches end of non-void function [-Werror=return-type]
+   47 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+81810c8
