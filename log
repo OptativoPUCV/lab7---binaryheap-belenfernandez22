@@ -1,0 +1,13 @@
+Fri 29 Sep 2023 01:56:55 AM UTC: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c:22:3: error: expected ‘;’ before ‘void’
+   22 | }g
+      |   ^
+      |   ;
+......
+   25 | void heap_push(Heap* pq, void* data, int priority){
+      | ~~~~
+Compilation failed
+9dbabca
