@@ -35,16 +35,14 @@ void* heap_top(Heap* pq){
     heap->heapArray = (int*) HeapAlloc(heap->handle, 0, 3 * sizeof(int));
     if (heap->heapArray == NULL) {
         printf("Error: no se pudo asignar memoria para el arreglo heapArray.\n");
-        HeapDestroy(heap->handle); // Destruir el heap privado
-        free(heap); // Liberar la memoria del objeto Heap
+        HeapDestroy(heap->handle); 
+        free(heap); 
         return NULL;
     }
 
-    // Inicializar las variables del objeto Heap
-    heap->capacity = 3; // La capacidad inicial es de 3 casillas
-    heap->size = 0; // El tamaño actual es de 0 casillas
+    heap->capacity = 3; 
+    heap->size = 0; 
 
-    // Devolver el puntero al objeto Heap creado
     return heap;
 }
     return NULL;
