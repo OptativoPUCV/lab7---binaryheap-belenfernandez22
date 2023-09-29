@@ -17,3 +17,20 @@ Fri 29 Sep 2023 01:57:21 AM UTC:
  tests:  0|4
 total_score: 0/70
 ca32b6a
+Fri 29 Sep 2023 01:57:45 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:23:3: error: ‘yyy’ undeclared (first use in this function)
+   23 |   yyy
+      |   ^~~
+heap.c:23:3: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:23:6: error: expected ‘;’ before ‘}’ token
+   23 |   yyy
+      |      ^
+      |      ;
+   24 | }
+      | ~     
+Compilation failed
+7f73cf2
