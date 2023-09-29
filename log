@@ -415,3 +415,15 @@ test.c:(.text+0x41f): undefined reference to `heap_top'
 collect2: error: ld returned 1 exit status
 Compilation failed
 649b5d7
+Fri 29 Sep 2023 02:06:00 AM UTC: 
+ heap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+heap.c:55:7: error: redefinition of ‘createHeap’
+   55 | Heap* createHeap(){
+      |       ^~~~~~~~~~
+heap.c:20:7: note: previous definition of ‘createHeap’ with type ‘Heap *()’ {aka ‘struct Heap *()’}
+   20 | Heap* createHeap() {
+      |       ^~~~~~~~~~
+Compilation failed
+63c09f3

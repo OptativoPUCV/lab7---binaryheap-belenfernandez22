@@ -52,3 +52,7 @@ void heap_pop(Heap* pq){
 
 }
 
+Heap* createHeap(){
+
+   return NULL;
+}
