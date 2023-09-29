@@ -16,6 +16,22 @@ typedef struct Heap{
   int capac;
 } Heap;
 
+
+void* heap_top(Heap* pq){
+    return NULL;
+
+  
+}
+
+void heap_push(Heap* pq, void* data, int priority){
+
+}
+
+
+void heap_pop(Heap* pq){
+
+}
+
 // Implementar la función createHeap
 Heap* createHeap() {
     // Crear un nuevo objeto Heap y reservar memoria para él
@@ -39,20 +55,4 @@ Heap* createHeap() {
 
     // Devolver el puntero al objeto Heap creado
     return heap;
-}
-
-
-
-void heap_push(Heap* pq, void* data, int priority){
-
-}
-
-
-void heap_pop(Heap* pq){
-
-}
-
-Heap* createHeap(){
-
-   return NULL;
 }
