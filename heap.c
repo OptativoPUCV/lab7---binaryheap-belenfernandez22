@@ -19,7 +19,7 @@ typedef struct Heap{
 
 void* heap_top(Heap* pq){
   Heap* createHeap() {
-    // Crear un nuevo objeto Heap y reservar memoria para él
+  
     Heap* heap = (Heap*) malloc(sizeof(Heap));
     if (heap == NULL) {
         printf("Error: no se pudo reservar memoria para el heap.\n");
