@@ -427,3 +427,13 @@ heap.c:20:7: note: previous definition of ‘createHeap’ with type ‘Heap *()
       |       ^~~~~~~~~~
 Compilation failed
 63c09f3
+Fri 29 Sep 2023 02:06:02 AM UTC: 
+In file included from test.c:4:
+heap.c:55:7: error: redefinition of ‘createHeap’
+   55 | Heap* createHeap(){
+      |       ^~~~~~~~~~
+heap.c:20:7: note: previous definition of ‘createHeap’ with type ‘Heap *()’ {aka ‘struct Heap *()’}
+   20 | Heap* createHeap() {
+      |       ^~~~~~~~~~
+Compilation failed
+92a469a
