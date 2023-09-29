@@ -20,7 +20,11 @@ typedef struct Heap{
 void* heap_top(Heap* pq){
     return NULL;
 
-  yyy
+  typedef struct Heap {
+    HANDLE handle; //
+    int capacity; 
+    int size; 
+    int* heapArray;
 }
 
 
