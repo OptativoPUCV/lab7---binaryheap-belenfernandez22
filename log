@@ -407,3 +407,11 @@ test.c:(.text+0x41f): undefined reference to `heap_top'
 collect2: error: ld returned 1 exit status
 Compilation failed
 db33035
+Fri 29 Sep 2023 02:05:55 AM UTC: 
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccFLC73z.o: in function `test_top':
+test.c:(.text+0x41f): undefined reference to `heap_top'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x45b): undefined reference to `heap_top'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x499): undefined reference to `heap_top'
+collect2: error: ld returned 1 exit status
+Compilation failed
+649b5d7
