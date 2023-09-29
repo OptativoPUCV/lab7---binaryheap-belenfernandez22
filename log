@@ -377,3 +377,15 @@ Fri 29 Sep 2023 02:04:06 AM UTC:
  tests:  0|4
 total_score: 0/70
 dc69841
+Fri 29 Sep 2023 02:05:16 AM UTC: 
+ heap.c | 22 +++++++++++++++++++---
+ 1 file changed, 19 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c:55:7: error: redefinition of ‘createHeap’
+   55 | Heap* createHeap(){
+      |       ^~~~~~~~~~
+heap.c:20:7: note: previous definition of ‘createHeap’ with type ‘Heap *()’ {aka ‘struct Heap *()’}
+   20 | Heap* createHeap() {
+      |       ^~~~~~~~~~
+Compilation failed
+5440a13
