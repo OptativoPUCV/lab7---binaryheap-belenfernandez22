@@ -21,8 +21,7 @@ void* heap_top(Heap* pq){
     return NULL;
 
 
-  
-    int size; 
+
 }
 
 

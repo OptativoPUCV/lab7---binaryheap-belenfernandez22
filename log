@@ -168,3 +168,9 @@ heap.c:25:9: error: unused variable ‘size’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 395371a
+Fri 29 Sep 2023 02:02:40 AM UTC: 
+ heap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  0|4
+total_score: 0/70
+622e1f7
