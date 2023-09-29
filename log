@@ -157,3 +157,14 @@ test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 df15ea3
+Fri 29 Sep 2023 02:02:33 AM UTC: 
+ heap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:25:9: error: unused variable ‘size’ [-Werror=unused-variable]
+   25 |     int size;
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+395371a
