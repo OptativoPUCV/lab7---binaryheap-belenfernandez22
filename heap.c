@@ -24,7 +24,6 @@ void* heap_top(Heap* pq){
     HANDLE handle; 
     int capacity; 
     int size; 
-    int* heapArray;
 }
 
 
