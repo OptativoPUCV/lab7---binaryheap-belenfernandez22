@@ -599,3 +599,27 @@ heap.c:46:16: error: invalid operands to binary / (have ‘int (*)()’ and ‘i
 cc1: all warnings being treated as errors
 Compilation failed
 a10ad57
+Sat 14 Oct 2023 06:30:36 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   30 |   if(pq->size == pq->capac);
+      |   ^~
+heap.c:31:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   31 |   {
+      |   ^
+heap.c:43:5: error: unknown type name ‘heapElemñ’; did you mean ‘heapElem’?
+   43 |     heapElemñ tmp = pq->heapArray[i]; //Variable temporal, para guardar dato que se desea cambiar
+      |     ^~~~~~~~~
+      |     heapElem
+heap.c:43:21: error: incompatible types when initializing type ‘int’ using type ‘heapElem’ {aka ‘struct nodo’}
+   43 |     heapElemñ tmp = pq->heapArray[i]; //Variable temporal, para guardar dato que se desea cambiar
+      |                     ^~
+heap.c:45:32: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘int’
+   45 |     pq->heapArray[(i - 1)/2] = tmp;
+      |                                ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+69088d7
