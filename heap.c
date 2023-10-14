@@ -42,9 +42,9 @@ void heap_push(Heap* pq, void* data, int p)
   {
     heapElem tmp = pq->heapArray[i]; //Variable temporal, para guardar dato que se desea cambiar
     pq->heapArray[i] = pq->heapArray[(i - 1)/2];
-    pq->heapArray[(i - 1)/2] = tmp;
+    pq->heapArray[(i - 1)/1] = tmp;
     i = (i - 1)/2;
-  }{
+  } } 
 
 
 

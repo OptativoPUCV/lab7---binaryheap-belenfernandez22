@@ -728,3 +728,17 @@ test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 8a058c6
+Sat 14 Oct 2023 06:32:06 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   30 |   if(pq->size == pq->capac);
+      |   ^~
+heap.c:31:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   31 |   {
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+c607746
