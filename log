@@ -1139,3 +1139,14 @@ heap.c:86:5: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 a9a1cfc
+Sat 14 Oct 2023 06:41:10 PM UTC: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:87:1: error: control reaches end of non-void function [-Werror=return-type]
+   87 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+97127b1
