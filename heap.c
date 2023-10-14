@@ -8,7 +8,7 @@
 typedef struct nodo{
    void* data;
    int priority;
-}heapElem;
+heapElem;
 
 typedef struct Heap{
   heapElem* heapArray;
@@ -111,4 +111,4 @@ Heap* createHeap() {
   //arreglo->size = 0;
   //arreglo->capac = 3;
   //return arreglo;
-//}//
+//}

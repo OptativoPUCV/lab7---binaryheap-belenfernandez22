@@ -980,3 +980,12 @@ test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 759cbf6
+Sat 14 Oct 2023 06:37:52 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c:11:1: error: expected specifier-qualifier-list before ‘heapElem’
+   11 | heapElem;
+      | ^~~~~~~~
+Compilation failed
+b3c27b7
