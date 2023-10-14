@@ -507,3 +507,14 @@ heap.c:99:16: error: expected ‘;’ before ‘}’ token
       | ~               
 Compilation failed
 6db1111
+Sat 14 Oct 2023 06:28:41 PM UTC: 
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:99:16: error: expected ‘;’ before ‘}’ token
+   99 |     return heap
+      |                ^
+      |                ;
+  100 | }
+      | ~               
+Compilation failed
+1988bb4
