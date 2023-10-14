@@ -79,7 +79,7 @@ void heap_pop(Heap* pq)
     break;
   }
   pq->size = i;
-  {
+   }
 
 Heap* createHeap() {
     // Crear un nuevo objeto Heap y reservar memoria para él
