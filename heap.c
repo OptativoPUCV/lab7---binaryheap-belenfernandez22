@@ -8,7 +8,7 @@
 typedef struct nodo{
    void* data;
    int priority;
-   heapElem;
+}heapElem;
 
 typedef struct Heap{
   heapElem* heapArray;
@@ -44,11 +44,12 @@ void heap_push(Heap* pq, void* data, int p)
     pq->heapArray[i] = pq->heapArray[(i - 1)/2];
     pq->heapArray[(i - 1)/2] = tmp;
     i = (i - 1)/2;
-  } 
+  }
+
 
 void heap_pop(Heap* pq)
 {
-    int i = pq->size;
+  int i = pq->size;
   pq->heapArray[0] = pq->heapArray[i-1];
   i--;
   int k = 0;
@@ -77,9 +78,9 @@ void heap_pop(Heap* pq)
     break;
   }
   pq->size = i;
-   }
+}
 
-Heap* createHeap() 
+Heap* createHeap() {
     // Crear un nuevo objeto Heap y reservar memoria para él
     Heap* heap = (Heap*) malloc(sizeof(Heap));
     if (heap == NULL) {
@@ -95,10 +96,7 @@ Heap* createHeap()
         return NULL;
     }
     return heap;
-
-
-
-
+}
 
 //
 //Heap* createHeap()
