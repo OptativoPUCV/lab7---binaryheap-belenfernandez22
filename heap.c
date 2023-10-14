@@ -27,7 +27,7 @@ void* heap_top(Heap* pq)
 
 void heap_push(Heap* pq, void* data, int p)
 {
-
+uu
 }
 
 

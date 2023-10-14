@@ -524,3 +524,20 @@ Sat 14 Oct 2023 06:29:42 PM UTC:
  tests:  2|2
 total_score: 20/70
 8f2fc9c
+Sat 14 Oct 2023 06:29:50 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:1: error: ‘uu’ undeclared (first use in this function)
+   30 | uu
+      | ^~
+heap.c:30:1: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:30:3: error: expected ‘;’ before ‘}’ token
+   30 | uu
+      |   ^
+      |   ;
+   31 | }
+      | ~  
+Compilation failed
+ca3e817
