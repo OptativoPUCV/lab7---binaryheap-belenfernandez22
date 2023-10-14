@@ -1122,3 +1122,20 @@ Sat 14 Oct 2023 06:40:38 PM UTC:
  tests:  8|0
 total_score: 70/70
 2f23404
+Sat 14 Oct 2023 06:41:02 PM UTC: 
+ heap.c | 13 +------------
+ 1 file changed, 1 insertion(+), 12 deletions(-)
+In file included from test.c:4:
+heap.c:87:5: error: expected identifier or ‘(’ before ‘return’
+   87 |     return heap;
+      |     ^~~~~~
+heap.c:88:1: error: expected identifier or ‘(’ before ‘}’ token
+   88 | }
+      | ^
+heap.c: In function ‘createHeap’:
+heap.c:86:5: error: control reaches end of non-void function [-Werror=return-type]
+   86 |     }
+      |     ^
+cc1: all warnings being treated as errors
+Compilation failed
+a9a1cfc
