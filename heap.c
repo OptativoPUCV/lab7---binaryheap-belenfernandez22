@@ -80,7 +80,7 @@ void heap_pop(Heap* pq)
   pq->size = i;
 }
 
-Heap* createHeap() 
+Heap* createHeap() { 
     // Crear un nuevo objeto Heap y reservar memoria para él
     Heap* heap = (Heap*) malloc(sizeof(Heap));
     if (heap == NULL) {
@@ -91,7 +91,7 @@ Heap* createHeap()
     heap->capac = 3; // La capacidad inicial es de 3 casillas
     heap->heapArray = (heapElem*) malloc(heap->capac * sizeof(heapElem));
     if (heap->heapArray == NULL) {
-        printf("Error: no se pudo reservar memoria para el arreglo heapArray.\n");
+        printf("Error: no se pudo reservar memoria para el arreglo heapArray.n");
         free(heap); 
         return NULL;
     }
