@@ -494,3 +494,16 @@ test.c:(.text+0x6f1): undefined reference to `heap_pop'
 collect2: error: ld returned 1 exit status
 Compilation failed
 22cd4f9
+Sat 14 Oct 2023 06:28:38 PM UTC: 
+ heap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:99:16: error: expected ‘;’ before ‘}’ token
+   99 |     return heap
+      |                ^
+      |                ;
+  100 | }
+      | ~               
+Compilation failed
+6db1111

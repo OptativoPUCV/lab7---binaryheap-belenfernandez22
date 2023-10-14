@@ -25,7 +25,7 @@ void* heap_top(Heap* pq)
   return pq->heapArray->data;
 }
 
-/*void heap_push(Heap* pq, void* data, int p)
+void heap_push(Heap* pq, void* data, int p)
 {
   if(pq->size == pq->capac)
   {
@@ -96,8 +96,8 @@ Heap* createHeap() {
         free(heap); 
         return NULL;
     }
-    return heap;
-}*/
+    return heap
+}
 
 
 
