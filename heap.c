@@ -79,7 +79,7 @@ void heap_pop(Heap* pq)
   pq->size = i;
    }
 
-Heap* createHeap() {
+Heap* createHeap() 
     // Crear un nuevo objeto Heap y reservar memoria para él
     Heap* heap = (Heap*) malloc(sizeof(Heap));
     if (heap == NULL) {
