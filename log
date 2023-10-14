@@ -756,3 +756,17 @@ heap.c:31:3: note: ...this statement, but the latter is misleadingly indented as
 cc1: all warnings being treated as errors
 Compilation failed
 c7ac910
+Sat 14 Oct 2023 06:32:37 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:28: error: expected expression before ‘:’ token
+   30 |   if(pq->size == pq->capac):
+      |                            ^
+heap.c:37:17: error: ‘i’ undeclared (first use in this function)
+   37 |   pq->heapArray[i].priority = p;
+      |                 ^
+heap.c:37:17: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d151f16
