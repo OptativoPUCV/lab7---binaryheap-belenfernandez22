@@ -623,3 +623,25 @@ heap.c:45:32: error: incompatible types when assigning to type ‘heapElem’ {a
 cc1: all warnings being treated as errors
 Compilation failed
 69088d7
+Sat 14 Oct 2023 06:31:08 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   30 |   if(pq->size == pq->capac);
+      |   ^~
+heap.c:31:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   31 |   {
+      |   ^
+heap.c:45:32: error: ‘tm’ undeclared (first use in this function); did you mean ‘tmp’?
+   45 |     pq->heapArray[(i - 1)/2] = tm;
+      |                                ^~
+      |                                tmp
+heap.c:45:32: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:43:14: error: unused variable ‘tmp’ [-Werror=unused-variable]
+   43 |     heapElem tmp = pq->heapArray[i]; //Variable temporal, para guardar dato que se desea cambiar
+      |              ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+383b617
