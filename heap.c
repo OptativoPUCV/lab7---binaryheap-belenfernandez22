@@ -45,7 +45,7 @@ void heap_push(Heap* pq, void* data, int p)
     pq->heapArray[(i - 1)/2] = tmp;
     i = (i - 1)/2;
   }
-
+}
 
 void heap_pop(Heap* pq)
 {
@@ -80,7 +80,7 @@ void heap_pop(Heap* pq)
   pq->size = i;
 }
 
-Heap* createHeap() {
+Heap* createHeap() 
     // Crear un nuevo objeto Heap y reservar memoria para él
     Heap* heap = (Heap*) malloc(sizeof(Heap));
     if (heap == NULL) {

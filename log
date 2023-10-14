@@ -1030,3 +1030,89 @@ test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 8d0ad84
+Sat 14 Oct 2023 06:40:27 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:85:5: error: parameter ‘heap’ is initialized
+   85 |     Heap* heap = (Heap*) malloc(sizeof(Heap));
+      |     ^~~~
+heap.c:86:5: error: expected declaration specifiers before ‘if’
+   86 |     if (heap == NULL) {
+      |     ^~
+heap.c:90:5: error: expected declaration specifiers before ‘heap’
+   90 |     heap->size = 0; // El tamaño actual es de 0 casillas
+      |     ^~~~
+heap.c:91:5: error: expected declaration specifiers before ‘heap’
+   91 |     heap->capac = 3; // La capacidad inicial es de 3 casillas
+      |     ^~~~
+heap.c:92:5: error: expected declaration specifiers before ‘heap’
+   92 |     heap->heapArray = (heapElem*) malloc(heap->capac * sizeof(heapElem));
+      |     ^~~~
+heap.c:93:5: error: expected declaration specifiers before ‘if’
+   93 |     if (heap->heapArray == NULL) {
+      |     ^~
+heap.c:98:5: error: expected declaration specifiers before ‘return’
+   98 |     return heap;
+      |     ^~~~~~
+heap.c:99:1: error: expected declaration specifiers before ‘}’ token
+   99 | }
+      | ^
+test.c:6:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+    6 | char * _strdup(const char * str) {
+      |                                  ^
+test.c:13:1: error: parameter ‘test_id’ is initialized
+   13 | int test_id = -1;
+      | ^~~
+test.c:16:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   16 | int success(){
+      |              ^
+test.c:21:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   21 | void err_msg(char* msg){
+      |                        ^
+test.c:28:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   28 | void ok_msg(char* msg){
+      |                       ^
+test.c:34:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   34 | void info_msg(char* msg){
+      |                         ^
+test.c:39:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   39 | int test_suite(int(*test)(), char* msg, int max_score, int id, int req_id){
+      |                                                                           ^
+test.c:55:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   55 | void view_array(Heap* h){
+      |                         ^
+test.c:64:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   64 | Heap* initialize_heap(){
+      |                        ^
+test.c:80:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   80 | int test_create(){
+      |                  ^
+test.c:116:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  116 | int test_top(){
+      |               ^
+test.c:145:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  145 | int test_push(){
+      |                ^
+test.c:222:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  222 | int test_pop(){
+      |               ^
+test.c:276:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  276 | int main( int argc, char *argv[] ) {
+      |                                    ^
+test.c:13:5: error: declaration for parameter ‘test_id’ but no such parameter
+   13 | int test_id = -1;
+      |     ^~~~~~~
+test.c:12:6: error: declaration for parameter ‘msg’ but no such parameter
+   12 | char msg[300];
+      |      ^~~
+In file included from test.c:4:
+heap.c:85:11: error: declaration for parameter ‘heap’ but no such parameter
+   85 |     Heap* heap = (Heap*) malloc(sizeof(Heap));
+      |           ^~~~
+test.c:293: error: expected ‘{’ at end of input
+test.c:293: error: control reaches end of non-void function [-Werror=return-type]
+cc1: all warnings being treated as errors
+Compilation failed
+0d6b1fc
