@@ -44,7 +44,7 @@ void heap_push(Heap* pq, void* data, int p)
     pq->heapArray[i] = pq->heapArray[(i - 1)/2];
     pq->heapArray[(i - 1)/2] = tmp;
     i = (i - 1)/2;
-  }[
+  }{
 
 
 
