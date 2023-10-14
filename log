@@ -547,3 +547,55 @@ Sat 14 Oct 2023 06:29:56 PM UTC:
  tests:  2|2
 total_score: 20/70
 c0038fc
+Sat 14 Oct 2023 06:30:19 PM UTC: 
+ heap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:3: error: implicit declaration of function ‘i’ [-Werror=implicit-function-declaration]
+   30 |   i(pq->size == pq->capac)
+      |   ^
+heap.c:30:27: error: expected ‘;’ before ‘{’ token
+   30 |   i(pq->size == pq->capac)
+      |                           ^
+      |                           ;
+   31 |   {
+      |   ~                        
+heap.c:37:16: error: array subscript is not an integer
+   37 |   pq->heapArray[i].priority = p;
+      |                ^
+heap.c:38:16: error: array subscript is not an integer
+   38 |   pq->heapArray[i].data = data;
+      |                ^
+heap.c:41:31: error: array subscript is not an integer
+   41 |   while(i > 0 && pq->heapArray[i].priority > pq->heapArray[(i - 1)/2].priority)
+      |                               ^
+heap.c:41:67: error: invalid operands to binary / (have ‘int (*)()’ and ‘int’)
+   41 |   while(i > 0 && pq->heapArray[i].priority > pq->heapArray[(i - 1)/2].priority)
+      |                                                            ~~~~~~~^
+      |                                                               |
+      |                                                               int (*)()
+heap.c:43:33: error: array subscript is not an integer
+   43 |     heapElem tmp = pq->heapArray[i]; //Variable temporal, para guardar dato que se desea cambiar
+      |                                 ^
+heap.c:44:18: error: array subscript is not an integer
+   44 |     pq->heapArray[i] = pq->heapArray[(i - 1)/2];
+      |                  ^
+heap.c:44:45: error: invalid operands to binary / (have ‘int (*)()’ and ‘int’)
+   44 |     pq->heapArray[i] = pq->heapArray[(i - 1)/2];
+      |                                      ~~~~~~~^
+      |                                         |
+      |                                         int (*)()
+heap.c:45:26: error: invalid operands to binary / (have ‘int (*)()’ and ‘int’)
+   45 |     pq->heapArray[(i - 1)/2] = tmp;
+      |                   ~~~~~~~^
+      |                      |
+      |                      int (*)()
+heap.c:46:16: error: invalid operands to binary / (have ‘int (*)()’ and ‘int’)
+   46 |     i = (i - 1)/2;
+      |         ~~~~~~~^
+      |            |
+      |            int (*)()
+cc1: all warnings being treated as errors
+Compilation failed
+a10ad57
