@@ -989,3 +989,12 @@ heap.c:11:1: error: expected specifier-qualifier-list before ‘heapElem’
       | ^~~~~~~~
 Compilation failed
 b3c27b7
+Sat 14 Oct 2023 06:39:00 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c:11:4: error: expected specifier-qualifier-list before ‘heapElem’
+   11 |    heapElem;
+      |    ^~~~~~~~
+Compilation failed
+77c8eee

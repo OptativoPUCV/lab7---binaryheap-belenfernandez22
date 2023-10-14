@@ -8,7 +8,7 @@
 typedef struct nodo{
    void* data;
    int priority;
-heapElem;
+   heapElem;
 
 typedef struct Heap{
   heapElem* heapArray;
@@ -45,8 +45,6 @@ void heap_push(Heap* pq, void* data, int p)
     pq->heapArray[(i - 1)/2] = tmp;
     i = (i - 1)/2;
   } 
-
-
 
 void heap_pop(Heap* pq)
 {
@@ -97,7 +95,7 @@ Heap* createHeap() {
         return NULL;
     }
     return heap;
-}
+
 
 
 
