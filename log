@@ -456,3 +456,23 @@ heap.c:25:29: error: expected ‘;’ before ‘}’ token
       | ~                            
 Compilation failed
 61899cb
+Sat 14 Oct 2023 06:26:56 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccuklCpe.o: in function `test_create':
+test.c:(.text+0xf6): undefined reference to `createHeap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccuklCpe.o: in function `test_push':
+test.c:(.text+0x489): undefined reference to `heap_push'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x509): undefined reference to `heap_push'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x5a2): undefined reference to `heap_push'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x620): undefined reference to `heap_push'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x644): undefined reference to `heap_push'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccuklCpe.o: in function `test_pop':
+test.c:(.text+0x6f1): undefined reference to `heap_pop'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x733): undefined reference to `heap_pop'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x751): undefined reference to `heap_pop'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x76b): undefined reference to `heap_pop'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x789): undefined reference to `heap_pop'
+collect2: error: ld returned 1 exit status
+Compilation failed
+bf4d914

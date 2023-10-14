@@ -22,7 +22,7 @@ void* heap_top(Heap* pq)
   {
     return NULL;
   }
-  return pq->heapArray->data
+  return pq->heapArray->data;
 }
 
 /*void heap_push(Heap* pq, void* data, int p)
